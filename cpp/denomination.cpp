@@ -26,11 +26,26 @@
 #define be(x) (x).begin(),(x).end()
 using namespace std;
 
-void study();
 
 int main(){
-	fastio;
-
-	
+	ll t;
+	cin>>t;
+	while(t--){
+		ll n;
+		cin>>n;
+		ll i=1,j=n,ans=0;
+		while(i<=j){
+			ll mid = i+(j-i)/2,check;
+			check = (mid*(mid+1))/2;
+			if(check >= n){
+				ans = mid;
+				j=mid-1;
+			}
+			else{
+				i=mid+1;
+			}
+		}
+		cout<<ans;line;
+	}	
 	return 0;    
 }

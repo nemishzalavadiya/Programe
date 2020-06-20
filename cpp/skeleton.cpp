@@ -1,26 +1,4 @@
-#include <iostream>
-#include<stdio.h>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <fstream>
-#include <queue>
-#include <deque>
-#include <bitset>
-#include <iterator>
-#include <list>
-#include <stack>
-#include <map>
-#include <set>
-#include <functional>
-#include <utility>
-#include <climits>
-#include<unordered_map>
-#include <cmath>
-#include <cstdio>
-#include <cstring>
-#include <iomanip>
-#include <cassert>
+#include<bits/stdc++.h>
 #define ll long long 
 #define vl vector<ll> 
 #define vvl vector<vl> // v(r,vector<ll>(col,init_value?))
