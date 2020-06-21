@@ -1,6 +1,26 @@
 // getchar_unlocked() > getchar() > scanf() > cin
 // cout<<endl() < cout<<"\n";
-#include<bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <fstream>
+#include <queue>
+#include <deque>
+#include <bitset>
+#include <iterator>
+#include <list>
+#include <stack>
+#include <map>
+#include <set>
+#include <functional>
+#include <utility>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <iomanip>
+#include <cassert>
 #define ll long long 
 #define vl vector<ll> 
 #define vvl vector<vl> // v(r,vector<ll>(col,init_value?))

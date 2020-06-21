@@ -1,4 +1,24 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <fstream>
+#include <queue>
+#include <deque>
+#include <bitset>
+#include <iterator>
+#include <list>
+#include <stack>
+#include <map>
+#include <set>
+#include <functional>
+#include <utility>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <iomanip>
+#include <cassert>
 using namespace std;
 /*
  * Complete the beautifulQuadruples function below.
