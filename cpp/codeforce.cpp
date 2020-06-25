@@ -66,25 +66,7 @@ int main()
     cin>>t;
     while(t--)
     {
-		ll n,k,happay=0;
-		cin>>n>>k;
-		vl integer(n);
-		vl fri(k);
-		array1d(integer,n);
-		array1d(fri,k);
-		sort(be(integer));
-		sort(be(fri));
-		for (int i = n - k; i < n; ++i)
-            happay += integer[i];
-        for (int i = 0, j = n - k; i < k; ++i) {
-            j -= fri[i] - 1;
-            if (fri[i] == 1) {
-                happay += integer[n - i - 1];
-            } else {
-                happay += integer[j];
-            }
-        }
-		cout<<happay<<endl;
+		fastio;
     }
     return 0;
 }
