@@ -59,14 +59,27 @@ int power(int a,int b){
 	}
 	return res;
 }
-
+void print(vector<pair<ll,ll>> temp){
+	for(auto a: temp){
+		cout<<a.first<<" "<<a.second<<endl;
+	}
+}
+bool compare(pair<ll,ll> a,pair<ll,ll> b){
+	if(a.first==b.first){
+		return a.second>b.second;
+	}
+	else{
+		return a.first<b.first;
+	}
+}
 int main()
 {   
+	fastio;
     int t;
     cin>>t;
     while(t--)
     {
-		fastio;
+				
     }
     return 0;
 }
