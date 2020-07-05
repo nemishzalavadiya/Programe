@@ -83,15 +83,38 @@ bool compare(pair<ll, ll> a, pair<ll, ll> b)
 		return a.first < b.first;
 	}
 }
+
+const int MAXN = 5100;
+ 
+int N;
+int arr[MAXN];
+vector <pair <int, pair <int, int> > > v;
 int main()
 {
 	fastio;
-	int t;
-	cin >> t;
-	while (t--)
-	{
-		evaluate();
-	}
-	return 0;
+	// int t;
+	// cin >> t;
+	// while (t--)
+	// {
+	// 	evaluate();
+	// }
+	// return 0;
+	cin >> N;
+
+    for (int i = 0; i < N; i++)
+        cin >> arr[i];
+ 
+    for (int i = 0; i < N; i++)
+        for (int j = i + 1; j < N; j++)
+            if (arr[i] > arr[j])
+                v.push_back(make_pair (arr[i], make_pair (i, -j)));
+    sort (v.begin(), v.end());
+ 
+    cout << v.size() << "\n";
+    for (int i = 0; i < v.size(); i++)
+    {
+        cout << v[i].second.first + 1 << " " << -v[i].second.second + 1 << "\n";
+        swap (arr[v[i].second.first], arr[-v[i].second.second]);
+    }
 }
 
