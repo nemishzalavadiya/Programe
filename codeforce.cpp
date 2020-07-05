@@ -90,7 +90,7 @@ int main()
 	cin >> t;
 	while (t--)
 	{
-		evaluate();
+		
 	}
 	return 0;
 }
