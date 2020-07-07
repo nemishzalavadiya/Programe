@@ -5,6 +5,12 @@
 // Algorithmic : Dynamic Programming
 
 // problem with all negative in array
+
+#include <iostream>
+#include <stdio.h>
+#include <algorithm>
+using namespace std;
+
 int maxSubArraySum(int a[], int size)
 {
     int max_so_far = 0, max_ending_here = 0;
@@ -24,9 +30,6 @@ int maxSubArraySum(int a[], int size)
 
 // solution to above problem,
 
-#include <iostream>
-using namespace std;
-
 int maxSubArraySum(int a[], int size)
 {
     int max_so_far = a[0];
@@ -34,6 +37,7 @@ int maxSubArraySum(int a[], int size)
 
     for (int i = 1; i < size; i++)
     {
+        // dynamic approach
         curr_max = max(a[i], curr_max + a[i]);
         max_so_far = max(max_so_far, curr_max);
     }
