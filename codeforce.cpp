@@ -83,6 +83,15 @@ bool compare(pair<ll, ll> a, pair<ll, ll> b)
 		return a.first < b.first;
 	}
 }
+int sumDigit(ll number){
+	int sum=0;
+	while(number!=0){
+		sum+=number%10;
+		number/=10;
+	}
+	return sum;
+}
+
 int main()
 {
 	fastio;
@@ -90,7 +99,30 @@ int main()
 	cin >> t;
 	while (t--)
 	{
-		
+		ll n,chef=0,monty=0;
+		cin>>n;
+		for(int i=0;i<n;i++){
+			ll chef_in,monty_in;
+			cin>>chef_in>>monty_in;
+			ll digitchef=sumDigit(chef_in);ll digitmonty=sumDigit(monty_in);
+			if(digitchef>digitmonty){
+				chef++;
+			}
+			else if(digitchef<digitmonty){
+				monty++;
+			}else{
+				monty++;chef++;
+			}
+		}
+		if(chef>monty){
+			cout<<0<<" "<<chef<<"\n";
+		}
+		else if(chef<monty){
+			cout<<1<<" "<<monty<<"\n";
+		}
+		else{
+			cout<<2<<" "<<chef<<"\n";
+		}
 	}
 	return 0;
 }
