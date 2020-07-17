@@ -21,7 +21,7 @@
 #include <cstring>
 #include <iomanip>
 #include <cassert>
-#define ll long long
+#define ll unsigned long long
 #define vl vector<ll>
 #define vvl vector<vl> // v(r,vector<ll>(col,init_value?))
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
@@ -45,6 +45,7 @@
 using namespace std;
 const int mod9 = 998244353;
 const int mod7 = 10000007;
+
 //setbase - cout << setbase (16)a; cout << 100 << endl; Prints 64
 //setfill -   cout << setfill ('x') << setw (5); cout << 77 <<endl;prints xxx77
 //setprecision - cout << setprecision (14) << f << endl; Prints x.xxxx
@@ -83,47 +84,54 @@ bool compare(pair<ll, ll> a, pair<ll, ll> b)
 		return a.first < b.first;
 	}
 }
-int sumDigit(ll number){
-	int sum=0;
-	while(number!=0){
-		sum+=number%10;
-		number/=10;
+int sumDigit(ll number)
+{
+	int sum = 0;
+	while (number != 0)
+	{
+		sum += number % 10;
+		number /= 10;
 	}
 	return sum;
 }
 
 int main()
 {
-	fastio;
+	//fastio;
 	int t;
 	cin >> t;
 	while (t--)
 	{
-		ll n,chef=0,monty=0;
-		cin>>n;
-		for(int i=0;i<n;i++){
-			ll chef_in,monty_in;
-			cin>>chef_in>>monty_in;
-			ll digitchef=sumDigit(chef_in);ll digitmonty=sumDigit(monty_in);
-			if(digitchef>digitmonty){
-				chef++;
+		ll n, x,day=0;
+		cin >> n >> x;
+		vector<ll> people(n);
+		array1d(people,n);
+		sort(be(people));
+		if(people[n-1]<=x){
+			cout<<n<<"\n";
+			continue;
+		}
+		ll index=lower_bound(be(people),x)-people.begin(),last=n-1,lasttotal=people[last];
+		day+=index;
+		for(index;index<n;++index){
+			if(people[index]==0)continue;
+			while(x<people[index]){
+				if(index!=last)
+				people[last]=min(lasttotal,(people[last]-x)*2);
+				x<<=1;
+				day+=1;	
 			}
-			else if(digitchef<digitmonty){
-				monty++;
-			}else{
-				monty++;chef++;
+			if(x>=people[index]){
+				x=people[index];
+				people[index]=0;
+				if(index !=last && people[last]<lasttotal){
+					people[last]=min(lasttotal,(people[last])*2);
+				}
+				x<<=1;
+				day+=1;
 			}
 		}
-		if(chef>monty){
-			cout<<0<<" "<<chef<<"\n";
-		}
-		else if(chef<monty){
-			cout<<1<<" "<<monty<<"\n";
-		}
-		else{
-			cout<<2<<" "<<chef<<"\n";
-		}
+		cout<<day<<"\n";
 	}
 	return 0;
 }
-
