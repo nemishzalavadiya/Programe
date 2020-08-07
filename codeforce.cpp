@@ -23,7 +23,7 @@
 #include <cassert>
 #define ll unsigned long long
 #define vl vector<ll>
-#define vvl vector<vl> // v(r,vector<ll>(col,init_value?))
+#define vvl vector<vl> 
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define loop(x, n) for (long long x = 0; x < n; x++)
 #define array1d(arr, NN) loop(ii, NN) cin >> arr[ii];
@@ -50,50 +50,6 @@ const int mod7 = 10000007;
 //setfill -   cout << setfill ('x') << setw (5); cout << 77 <<endl;prints xxx77
 //setprecision - cout << setprecision (14) << f << endl; Prints x.xxxx
 //cout.precision(x)  cout<<fixed<<val;  // prints x digits after decimal in val
-int power(int a, int b)
-{
-	int res = 1;
-	while (b > 0)
-	{
-		if (b % 2)
-		{
-			res *= a;
-			res %= mod9;
-		}
-		b /= 2;
-		a *= a;
-		a %= mod9;
-	}
-	return res;
-}
-void print(vector<pair<ll, ll>> temp)
-{
-	for (auto a : temp)
-	{
-		cout << a.first << " " << a.second << endl;
-	}
-}
-bool compare(pair<ll, ll> a, pair<ll, ll> b)
-{
-	if (a.first == b.first)
-	{
-		return a.second > b.second;
-	}
-	else
-	{
-		return a.first < b.first;
-	}
-}
-int sumDigit(ll number)
-{
-	int sum = 0;
-	while (number != 0)
-	{
-		sum += number % 10;
-		number /= 10;
-	}
-	return sum;
-}
 
 int main()
 {
@@ -102,36 +58,7 @@ int main()
 	cin >> t;
 	while (t--)
 	{
-		ll n, x,day=0;
-		cin >> n >> x;
-		vector<ll> people(n);
-		array1d(people,n);
-		sort(be(people));
-		if(people[n-1]<=x){
-			cout<<n<<"\n";
-			continue;
-		}
-		ll index=lower_bound(be(people),x)-people.begin(),last=n-1,lasttotal=people[last];
-		day+=index;
-		for(index;index<n;++index){
-			if(people[index]==0)continue;
-			while(x<people[index]){
-				if(index!=last)
-				people[last]=min(lasttotal,(people[last]-x)*2);
-				x<<=1;
-				day+=1;	
-			}
-			if(x>=people[index]){
-				x=people[index];
-				people[index]=0;
-				if(index !=last && people[last]<lasttotal){
-					people[last]=min(lasttotal,(people[last])*2);
-				}
-				x<<=1;
-				day+=1;
-			}
-		}
-		cout<<day<<"\n";
+		
 	}
 	return 0;
 }
