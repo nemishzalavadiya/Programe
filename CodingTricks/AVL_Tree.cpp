@@ -38,9 +38,6 @@ node* leftRotation(node* root) {
        newRoot->ht = setH(newRoot);
        return newRoot;
    }
-
-
-
 node * insert(node *root,int val)
 {
 	if(!root){
