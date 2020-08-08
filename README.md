@@ -7,5 +7,3 @@
 >HackerEarth
 
 >Codeforces
-
->Nemish
