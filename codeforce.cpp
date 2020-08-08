@@ -58,6 +58,8 @@ int main()
 	cin >> t;
 	while (t--)
 	{
+		ll n;
+		cin>>n;
 		
 	}
 	return 0;
