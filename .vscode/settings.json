@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "bits/stdc++.h":"cpp",
         "algorithm": "cpp",
         "xhash": "cpp",
         "xtree": "cpp",
