@@ -43,7 +43,20 @@ Give candy to everyone each "turn" first [until you can't], then give candy to o
 using namespace std;
 class Solution {
 public:
-
+vector<int> distributeCandies(int candies, int num_people) {
+        vector<int> ans(num_people,0);
+        int i=1,point=0;
+        while(candies>0){
+            if(candies<i){
+                ans[point]+=candies;
+                break;
+            }
+            ans[point]+=i;
+            candies-=i;i++;
+            point=(point+1)%num_people;
+        }
+        return ans;
+    }
 };
 int main(int argc, char *argv[]) {
 
