@@ -25,7 +25,6 @@
 #define ll long long
 #define vl vector<ll>
 #define vvl vector<vl> 
-#define fastio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define loop(x, n) for (long long x = 0; x < n; x++)
 #define array1d(arr, NN) loop(ii, NN) cin >> arr[ii];
 #define array2d(arr, NN, MM) loop(ii, NN) loop(jj, MM) cin >> arr[ii][jj]
@@ -42,22 +41,23 @@
 #define pb push_back
 #define ss second
 #define str to_string
-#define de if (debug)
-#define debug 0
+#define fastio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 using namespace std;
 const int mod9 = 998244353;
 const int mod7 = 10000007;
-int main()
-{
-	fastio;
+
+void solve(){
 	ll t;
 	cin >> t;
 	while (t--)
 	{
-		ll n,k;
-		cin>>n>>k;
-		if(k<=n)cout<<0<<endl;
-		else cout<<(k-n)<<endl;
+		
 	}
+}
+
+int main()
+{
+	fastio;
+	solve();
 	return 0;
 }
