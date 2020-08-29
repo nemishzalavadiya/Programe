@@ -177,3 +177,5 @@
 }
 
 ```
+
+* Press F6 to compile and run c/c++ code.

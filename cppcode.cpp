@@ -22,6 +22,7 @@
 #include <iomanip>
 #include <cassert>
 #include <cstdlib>
+
 #define ll long long
 #define vl vector<ll>
 #define vvl vector<vl> 
@@ -42,6 +43,7 @@
 #define ss second
 #define str to_string
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
+
 using namespace std;
 const int mod9 = 998244353;
 const int mod7 = 10000007;
@@ -51,7 +53,7 @@ void solve(){
 	cin >> t;
 	while (t--)
 	{
-		
+		cout<<"morning"<<endl;
 	}
 }
 
