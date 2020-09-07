@@ -53,7 +53,7 @@ void solve(){
 	cin >> t;
 	while (t--)
 	{
-		cout<<"morning"<<endl;
+		
 	}
 }
 
