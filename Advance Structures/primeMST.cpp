@@ -1,3 +1,4 @@
+// created connected intermediate tree
 #include <iostream>
 #include <string>
 #include <vector>
